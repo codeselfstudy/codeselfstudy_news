@@ -1,6 +1,13 @@
 # news.codeselfstudy.com
 
-This app loads certain forum posts in a Hacker News like format.
+This app loads certain forum posts in a HN-like format.
+
+## Development
+
+```
+$ npm install
+$ npm start
+```
 
 ## Notes
 

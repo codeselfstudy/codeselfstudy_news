@@ -11,7 +11,18 @@ export function formatSubmitDate(d) {
 }
 
 export function latestTopicsToNewsItems(latestTopicsJson) {
-    const topics = latestTopicsJson.topic_list.topics;
+    const topics = latestTopicsJson.topic_list.topics.map(t => {
+        const originalPoster = t.posters.filter(p => {
+            return (
+                p.description
+                    .split(",")
+                    .map(term => term.trim())
+                    .indexOf("Original Poster") > -1
+            );
+        })[0];
+        return Object.assign(t, originalPoster);
+    });
 
+    console.log("topics", topics);
     return topics;
 }

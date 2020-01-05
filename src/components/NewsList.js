@@ -16,7 +16,6 @@ export default function NewsList() {
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         axios.get(`${FORUM_BASE_URL}/latest.json`).then(res => {
-            console.log("res", res);
             const topics = latestTopicsToNewsItems(res.data);
             setNewsItems(topics);
             setIsLoading(false);

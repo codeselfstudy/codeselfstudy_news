@@ -33,13 +33,11 @@ export function latestTopicsToNewsItems(discourseLatestTopicsJson) {
                     .indexOf("Original Poster") > -1
             );
         })[0].user_id;
-        console.log("authorId", authorId);
 
         const author = R.find(R.propEq("id", authorId), users).username;
 
         return Object.assign(t, { author });
     });
 
-    console.log("topics", topics);
     return topics;
 }

@@ -16,10 +16,11 @@ body {
     .brand {
         font-weight: bold;
     }
-    background-color: orange;
+    background-color: lightblue;
     color: #fff;
     ul {
-        margin: 0;
+        max-width: 1000px;
+        margin: 0 auto;
         padding: 7px;
         list-style-type: none;
 

@@ -11,7 +11,10 @@ export default function NewsListItem({
     return (
         <div className="news-list-item">
             <h2>
-                <span className="likes">[{likeCount}]</span>{" "}
+                <span className="likes">
+                    <a className="like" href={url}>▲</a>
+                    {likeCount}
+                </span>{" "}
                 <a rel="noopener" href={url}>
                     {title}
                 </a>

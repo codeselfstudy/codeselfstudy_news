@@ -5,13 +5,19 @@ export default function About() {
         <div>
             <h2>About</h2>
             <p>
-                This site is a project of{" "}
+                This site is a simple Reddit- or HN-like site where you can
+                submit interesting news and discuss it.
+            </p>
+
+            <p>The backend is Discourse and the frontend is React.</p>
+            <p>
+                For more information, see{" "}
                 <a href="https://codeselfstudy.com/">Code Self Study</a> &mdash;
                 a programming club in Berkeley, California.
             </p>
             <h2>Apps</h2>
 
-            <p>Get the browser extensions:</p>
+            <p>Get the browser extensions for easier sharing:</p>
 
             <ul>
                 <li>

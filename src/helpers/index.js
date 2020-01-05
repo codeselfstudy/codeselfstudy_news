@@ -19,7 +19,8 @@ export function latestTopicsToNewsItems(latestTopicsJson) {
     const isAuthenticated = latestTopicsJson.topic_list.can_create_topic;
 
     return {
-        currentUser: "", // TODO
+        // TODO: do we need the current user's info? Maybe auth status is enough.
+        // currentUser: "",
         isAuthenticated: isAuthenticated,
         topics: topics,
     };

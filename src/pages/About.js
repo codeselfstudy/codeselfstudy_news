@@ -33,6 +33,14 @@ export default function About() {
                 </a>
                 .
             </p>
+            <h2>Contributing</h2>
+            <p>
+                Please see the issue queue on{" "}
+                <a href="https://github.com/codeselfstudy/codeselfstudy_news">
+                    the project's Github page
+                </a>
+                .
+            </p>
         </div>
     );
 }

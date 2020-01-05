@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import AuthLink from "./components/AuthLink";
+import { FORUM_BASE_URL } from "./helpers";
 import "./App.scss";
 
 export default function BasicExample() {
@@ -21,7 +22,11 @@ export default function BasicExample() {
                         <Link to="/about">about</Link>
                     </li>
                     <li>
-                        <a href="#">submit</a>
+                        <a
+                            href={`${FORUM_BASE_URL}/new-topic?title=&body=&category=news&tags=`}
+                        >
+                            submit
+                        </a>
                     </li>
                     <AuthLink isAuthenticated={true} />
                 </ul>

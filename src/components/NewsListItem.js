@@ -12,7 +12,7 @@ export default function NewsListItem({
         <div className="news-list-item">
             <h2>
                 <span className="likes">[{likeCount}]</span>{" "}
-                <a target="_blank" rel="noopener" href={url}>
+                <a rel="noopener" href={url}>
                     {title}
                 </a>
             </h2>

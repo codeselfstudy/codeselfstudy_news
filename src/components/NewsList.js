@@ -23,6 +23,12 @@ export default function NewsList() {
                     submittedAt={formatSubmitDate(i.created_at)}
                 />
             ))}
+
+            <div>
+                <p>
+                    <a href={FORUM_BASE_URL}>Read more&hellip;</a>
+                </p>
+            </div>
         </div>
     );
 }

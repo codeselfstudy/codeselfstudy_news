@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import { FORUM_BASE_URL } from "../helpers";
 
-function LoginLink({ url, text }) {
-    return (
-        <li>
-            <a target="_blank" href={url}>{text}</a>
-        </li>
-    );
-}
 export default function AuthLink({ isAuthenticated }) {
     const url = isAuthenticated
-        ? "https://forum.codeselfstudy.com/my/summary"
-        : "https://forum.codeselfstudy.com/login";
+        ? `${FORUM_BASE_URL}/my/summary`
+        : `${FORUM_BASE_URL}/login`;
     const text = isAuthenticated ? "my account" : "log in";
-    return <LoginLink url={url} text={text} />;
+    return (
+        <li>
+            <a href={url}>
+                {text}
+            </a>
+        </li>
+    );
 }

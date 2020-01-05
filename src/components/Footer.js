@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const styles = {
     margin: "117px 0 0 0",
@@ -10,7 +11,7 @@ export default function Footer() {
     return (
         <footer style={styles}>
             <a href="https://codeselfstudy.com/">Code Self Study</a> &bull;
-            Berkeley, California
+            Berkeley, California &bull; <Link to="/about">About Us</Link>
         </footer>
     );
 }

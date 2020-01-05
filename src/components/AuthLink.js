@@ -8,9 +8,7 @@ export default function AuthLink({ isAuthenticated }) {
     const text = isAuthenticated ? "my account" : "log in";
     return (
         <li>
-            <a href={url}>
-                {text}
-            </a>
+            <a href={url}>{text}</a>
         </li>
     );
 }

@@ -12,14 +12,12 @@ export default function NewsListItem({
         <div className="news-list-item">
             <h2>
                 <span className="likes">
-                    <a className="like" title={`visit page to vote`} href={url}>
+                    <a className="like" title="visit page to cast your vote" href={url}>
                         ▲
                     </a>
                     {likeCount}
                 </span>{" "}
-                <a rel="noopener" href={url}>
-                    {title}
-                </a>
+                <a href={url}>{title}</a>
             </h2>
             <div className="metadata">submitted on {submittedAt}</div>
         </div>

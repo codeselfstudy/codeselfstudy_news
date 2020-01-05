@@ -1,3 +1,9 @@
+# news.codeselfstudy.com
+
+This app loads certain forum posts in a Hacker News like format.
+
+## Default README Text
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

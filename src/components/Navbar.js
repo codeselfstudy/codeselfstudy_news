@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import AuthLink from "./AuthLink";
 import { FORUM_BASE_URL } from "../helpers";
 
-export default function Navbar() {
+export default function Navbar({ isAuthenticated }) {
     return (
         <nav id="headerNav">
             <ul>
@@ -23,6 +23,8 @@ export default function Navbar() {
                         submit
                     </a>
                 </li>
+                {/* for now, just show a "my account" link, whether they
+                are logged in or not */}
                 <AuthLink isAuthenticated={true} />
             </ul>
         </nav>

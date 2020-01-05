@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import { FORUM_BASE_URL, makeTopicUrl, formatSubmitDate } from "../helpers";
+import {
+    FORUM_BASE_URL,
+    makeTopicUrl,
+    formatSubmitDate,
+    latestTopicsToNewsItems,
+} from "../helpers";
 import NewsListItem from "./NewsListItem";
 import "../../node_modules/text-spinners/spinners.scss";
 
@@ -11,7 +16,8 @@ export default function NewsList() {
     useEffect(() => {
         axios.get(`${FORUM_BASE_URL}/latest.json`).then(res => {
             console.log("res", res);
-            setNewsItems(res.data.topic_list.topics);
+            const topics = latestTopicsToNewsItems(res.data)
+            setNewsItems(topics);
             setIsLoading(false);
         });
     }, []);

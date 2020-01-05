@@ -1,9 +1,10 @@
 import React from "react";
+import NewsList from "../components/NewsList";
 
 export default function Home() {
     return (
         <div>
-            <h2>Home</h2>
+            <NewsList />
         </div>
     );
 }

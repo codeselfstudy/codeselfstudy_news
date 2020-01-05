@@ -2,6 +2,14 @@
 
 This app loads certain forum posts in a Hacker News like format.
 
+## Notes
+
+- The design should look neat, but be very minimalistic. No animation or fancy things.
+- Eventually, we'll server-render it or add a dynamic backend.
+- Please format the code with Prettier.js. The general convention here is 4-space indentation and double-quotes.
+- To get involved with development, talk to an organizer at a meetup. This project is beginner-friendly.
+- Use React hooks instead of class-based components.
+
 ## Default README Text
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

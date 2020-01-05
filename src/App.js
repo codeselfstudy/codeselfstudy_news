@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import About from "./pages/About";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import AuthLink from "./components/AuthLink";
 import "./App.scss";
 
 export default function BasicExample() {
@@ -9,14 +12,18 @@ export default function BasicExample() {
             <nav id="headerNav">
                 <ul>
                     <li>
-                        <Link class="brand" to="/">
-                            News
+                        <Link className="brand" to="/">
+                            news
                         </Link>
                     </li>
 
                     <li>
-                        <Link to="/about">About</Link>
+                        <Link to="/about">about</Link>
                     </li>
+                    <li>
+                        <a href="#">submit</a>
+                    </li>
+                    <AuthLink isAuthenticated={true} />
                 </ul>
             </nav>
 
@@ -30,17 +37,7 @@ export default function BasicExample() {
                     </Route>
                 </Switch>
             </main>
+            <Footer />
         </Router>
-    );
-}
-
-// You can think of these components as "pages"
-// in your app.
-
-function Home() {
-    return (
-        <div>
-            <h2>Home</h2>
-        </div>
     );
 }

@@ -1,31 +1,26 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import About from "./pages/About";
+import "./App.scss";
 
 export default function BasicExample() {
     return (
         <Router>
-            <div>
+            <nav id="headerNav">
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link class="brand" to="/">
+                            News
+                        </Link>
                     </li>
+
                     <li>
                         <Link to="/about">About</Link>
                     </li>
-                    <li>
-                        <Link to="/dashboard">Dashboard</Link>
-                    </li>
                 </ul>
+            </nav>
 
-                <hr />
-
-                {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
+            <main id="main">
                 <Switch>
                     <Route exact path="/">
                         <Home />
@@ -33,11 +28,8 @@ export default function BasicExample() {
                     <Route path="/about">
                         <About />
                     </Route>
-                    <Route path="/dashboard">
-                        <Dashboard />
-                    </Route>
                 </Switch>
-            </div>
+            </main>
         </Router>
     );
 }
@@ -49,22 +41,6 @@ function Home() {
     return (
         <div>
             <h2>Home</h2>
-        </div>
-    );
-}
-
-function About() {
-    return (
-        <div>
-            <h2>About</h2>
-        </div>
-    );
-}
-
-function Dashboard() {
-    return (
-        <div>
-            <h2>Dashboard</h2>
         </div>
     );
 }

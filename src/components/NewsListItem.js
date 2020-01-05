@@ -6,20 +6,26 @@ export default function NewsListItem({
     url,
     submittedAt,
     likeCount,
-    submitter,
+    author,
 }) {
     return (
         <div className="news-list-item">
             <h2>
                 <span className="likes">
-                    <a className="like" title="visit page to cast your vote" href={url}>
+                    <a
+                        className="like"
+                        title="visit page to cast your vote"
+                        href={url}
+                    >
                         ▲
                     </a>
                     {likeCount}
                 </span>{" "}
                 <a href={url}>{title}</a>
             </h2>
-            <div className="metadata">submitted on {submittedAt}</div>
+            <div className="metadata">
+                submitted by {author} on {submittedAt}
+            </div>
         </div>
     );
 }

@@ -6,6 +6,7 @@ import {
     makeTopicUrl,
     formatSubmitDate,
     latestTopicsToNewsItems,
+    calculateTopicScore,
 } from "../helpers";
 import NewsListItem from "./NewsListItem";
 import "../../node_modules/text-spinners/spinners.scss";
@@ -16,7 +17,7 @@ export default function NewsList() {
     useEffect(() => {
         axios.get(`${FORUM_BASE_URL}/latest.json`).then(res => {
             console.log("res", res);
-            const topics = latestTopicsToNewsItems(res.data)
+            const topics = latestTopicsToNewsItems(res.data);
             setNewsItems(topics);
             setIsLoading(false);
         });
@@ -36,8 +37,9 @@ export default function NewsList() {
                     key={i.id}
                     title={i.title}
                     url={makeTopicUrl(i)}
-                    likeCount={i.like_count}
+                    likeCount={calculateTopicScore(i)}
                     submittedAt={formatSubmitDate(i.created_at)}
+                    author={i.author}
                 />
             ))}
 
